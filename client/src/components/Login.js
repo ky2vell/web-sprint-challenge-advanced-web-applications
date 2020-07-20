@@ -22,31 +22,44 @@ const Login = props => {
   };
 
   return (
-    <>
-      <h1>Welcome to the Bubble App!</h1>
-      <p>Build a login page here</p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='username'>UserName:</label>
-        <input
-          id='username'
-          type='text'
-          name='username'
-          value={values.username}
-          onChange={handleChanges}
-          placeholder='UserName..'
-        />
-        <label htmlFor='password'>Password:</label>
-        <input
-          id='password'
-          type='password'
-          name='password'
-          value={values.password}
-          onChange={handleChanges}
-          placeholder='Password..'
-        />
-        <button className='submit'>Submit</button>
-      </form>
-    </>
+    <div className='wrapper'>
+      <div className='container'>
+        <h1>Welcome to the Bubble App!</h1>
+        <form onSubmit={handleSubmit} className='login_form'>
+          <label htmlFor='username'>UserName:</label>
+          <input
+            id='username'
+            type='text'
+            name='username'
+            value={values.username}
+            onChange={handleChanges}
+            placeholder='UserName..'
+          />
+          <label htmlFor='password'>Password:</label>
+          <input
+            id='password'
+            type='password'
+            name='password'
+            value={values.password}
+            onChange={handleChanges}
+            placeholder='Password..'
+          />
+          <button>Login</button>
+        </form>
+      </div>
+      <ul className='bg-bubbles'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   );
 };
 
