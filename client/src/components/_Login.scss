@@ -1,7 +1,8 @@
 .wrapper {
+  background: linear-gradient(to bottom right, #efefef 0%, #ffffff 100%);
   display: flex;
   align-items: center;
-  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  justify-content: center;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -9,19 +10,32 @@
 }
 
 .container {
-  max-width: 600px;
-  margin: -5% auto 0;
+  width: 550px;
+  margin-top: -2%;
+  z-index: 9999;
+  background: white;
+  padding: 3rem;
+  box-shadow: inset 0 0 20px #dadada;
+  border-radius: 50%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
-    color: #fff;
-    font-size: 40px;
-    font-weight: 200;
+    font-size: 45px;
+    font-weight: 900;
+    max-width: 90%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
   }
 }
 
 body ::-webkit-input-placeholder {
   font-family: 'Source Sans Pro', sans-serif;
-  color: white;
+  color: #000;
   font-weight: 300;
 }
 
@@ -34,47 +48,30 @@ body ::-webkit-input-placeholder {
   z-index: 9999;
 
   input {
-    appearance: none;
-    outline: 0;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 250px;
+    border: 1px solid #e8e8e8;
     border-radius: 3px;
     padding: 10px 15px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 0.5rem auto;
     display: block;
+    width: 185px;
     text-align: center;
     font-size: 18px;
-    color: white;
     transition-duration: 0.25s;
     font-weight: 300;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    &:focus {
-      background-color: white;
-      color: #53e3a6;
-    }
   }
 
   button {
-    appearance: none;
-    outline: 0;
-    background-color: white;
     border: 0;
-    padding: 10px 15px;
-    color: #69b193;
-    font-weight: 600;
+    padding: 10px 40px;
     border-radius: 3px;
-    width: 250px;
+    width: 185px;
     cursor: pointer;
     font-size: 18px;
     transition-duration: 0.25s;
+    margin-top: 0.3rem;
 
     &:hover {
-      background-color: #f5f7f9;
+      background-color: #e4e4e4;
     }
   }
 
@@ -98,14 +95,15 @@ body ::-webkit-input-placeholder {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.15);
     bottom: -160px;
     animation: bubbles 15s infinite;
     transition-timing-function: linear;
+    box-shadow: inset 0 0 10px #a7a7a7;
   }
 }
 .bg-bubbles li:nth-child(1) {
   left: 10%;
+  background-color: hotpink;
 }
 
 .bg-bubbles li:nth-child(2) {
@@ -114,11 +112,13 @@ body ::-webkit-input-placeholder {
   height: 80px;
   animation-delay: 2s;
   animation-duration: 17s;
+  background-color: blue;
 }
 
 .bg-bubbles li:nth-child(3) {
   left: 25%;
   animation-delay: 4s;
+  background-color: magenta;
 }
 
 .bg-bubbles li:nth-child(4) {
@@ -126,11 +126,12 @@ body ::-webkit-input-placeholder {
   width: 60px;
   height: 60px;
   animation-duration: 22s;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: yellow;
 }
 
 .bg-bubbles li:nth-child(5) {
   left: 70%;
+  background-color: purple;
 }
 
 .bg-bubbles li:nth-child(6) {
@@ -138,7 +139,7 @@ body ::-webkit-input-placeholder {
   width: 120px;
   height: 120px;
   animation-delay: 3s;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: orange;
 }
 
 .bg-bubbles li:nth-child(7) {
@@ -146,6 +147,7 @@ body ::-webkit-input-placeholder {
   width: 160px;
   height: 160px;
   animation-delay: 7s;
+  background-color: black;
 }
 
 .bg-bubbles li:nth-child(8) {
@@ -154,6 +156,7 @@ body ::-webkit-input-placeholder {
   height: 20px;
   animation-delay: 15s;
   animation-duration: 40s;
+  background-color: green;
 }
 
 .bg-bubbles li:nth-child(9) {
@@ -162,7 +165,7 @@ body ::-webkit-input-placeholder {
   height: 10px;
   animation-delay: 2s;
   animation-duration: 40s;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: red;
 }
 
 .bg-bubbles li:nth-child(10) {
@@ -170,6 +173,7 @@ body ::-webkit-input-placeholder {
   width: 160px;
   height: 160px;
   animation-delay: 11s;
+  background-color: salmon;
 }
 
 @keyframes bubbles {
